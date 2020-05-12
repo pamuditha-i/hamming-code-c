@@ -10,8 +10,7 @@ char* parityRemove(int no_of_extra, int ltot,char* encyptedRedBitsq){
     
 // checking whether there are any errors
     for(int i=0;i<no_of_extra;i++)
-    {
-        int count,value = 0;
+    {   int count,value = 0;
         int position = (int)pow(2,i);
         ss=position-1;
         while(ss<ltot)
@@ -19,8 +18,7 @@ char* parityRemove(int no_of_extra, int ltot,char* encyptedRedBitsq){
             for(sss = ss; sss < ss+position; sss++)
             {
                 if(encyptedRedBitsq[sss] == '1')
-                    count++;
-            }
+                    count++;   }
             ss = ss + 2*position;
         }
         if(count%2 != 0) { error+=position; }
